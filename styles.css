@@ -1,0 +1,11 @@
+:root {
+    --Primary: #f7f7f7;  /* Text */
+    --Secondary: #0c0d0d; /* Background */
+    --PrimaryButton: #d7af1d;
+    --SecondaryButton: #000000;
+    --Accent: #e2bb2c;
+}
+
+body {
+    background-color: var(--Secondary);
+}
