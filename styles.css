@@ -57,8 +57,8 @@ html {
 * {
     box-sizing: border-box;
     /*
-    border: red solid 1px;
     */
+    border: red solid 1px;
 }
 
 body {
@@ -113,6 +113,9 @@ nav .nav-links a:hover {
 .header-font {
     font-size: 7rem;
 }
+.header-font-small {
+    font-size: 4rem;
+}
 
 .font-accent {
     font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono';
@@ -137,6 +140,26 @@ nav .nav-links a:hover {
     text-align: center;
     display: grid;
     place-items: center;
+}
+
+.content-container {
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+}
+
+.animated-box.team-splash {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-4em);
+}
+
+.animated-box.team-splash img {
+    position: absolute;
+    width: 8em;
+}
+.animated-box.team-splash.fade-in img:nth-child(1) {
+    transform: translate(-5em, -2em);
 }
 
 @media screen and (max-width: 600px) {
