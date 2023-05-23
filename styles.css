@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: local(JetBrains Mono Bold Nerd Font Complete),
+        url("fonts/Jetbrains/JetBrainsMonoBoldNerdFont.woff2") format("woff2"),
+        url("fonts/Jetbrains/JetBrainsMonoBoldNerdFont.ttf") format("truetype");
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: local(JetBrains Mono Regular Nerd Font Complete),
+        url("fonts/Jetbrains/JetBrainsMonoRegularNerdFont.woff2") format("woff2"),
+        url("fonts/Jetbrains/JetBrainsMonoRegularNerdFont.ttf") format("truetype");
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url("fonts/Ubuntu/Ubuntu-Regular.ttf") format('woff');
+}
+
 :root {
     --Primary: #f7f7f7;  /* Text */
     --Secondary: #0c0d0d; /* Background */
@@ -6,6 +33,36 @@
     --Accent: #e2bb2c;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--Secondary);
+    color: var(--Primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Ubuntu';
+}
+
+.header-font {
+    font-size: 7rem;
+}
+
+.font-accent {
+    font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono';
+}
+
+.accent-highlight {
+    color: var(--Accent);
+}
+
+.hero-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    place-items: center;
 }
