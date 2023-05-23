@@ -25,6 +25,22 @@
     src: local('Ubuntu'), url("fonts/Ubuntu/Ubuntu-Regular.ttf") format('woff');
 }
 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: var(--Tertiary);
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--Tertiary);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #909090;
+}
+
 :root {
     --Primary: #f7f7f7;  /* Text */
     --Secondary: #0c0d0d; /* Background */
@@ -32,6 +48,10 @@
     --PrimaryButton: #d7af1d;
     --SecondaryButton: #000000;
     --Accent: #e2bb2c;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -64,10 +84,10 @@ nav {
     font-size: 1.3rem;
 }
 
-nav img {
+nav > a, nav img {
     border-radius: 10%;
     width: auto;
-    height: 70%;
+    height: 90%;
 }
 
 nav .nav-links {
@@ -79,6 +99,9 @@ nav .nav-links {
 nav .nav-links a {
     cursor: pointer;
     transition: all ease-in-out 200ms;
+    user-select: none;
+    color: var(--Primary);
+    text-decoration: none;
 }
 
 nav .nav-links a:hover {
@@ -106,7 +129,7 @@ nav .nav-links a:hover {
     color: var(--Accent);
 }
 
-.hero-container {
+.screen-container {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
