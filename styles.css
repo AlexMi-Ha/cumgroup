@@ -28,6 +28,7 @@
 :root {
     --Primary: #f7f7f7;  /* Text */
     --Secondary: #0c0d0d; /* Background */
+    --Tertiary: #181919;
     --PrimaryButton: #d7af1d;
     --SecondaryButton: #000000;
     --Accent: #e2bb2c;
@@ -35,6 +36,9 @@
 
 * {
     box-sizing: border-box;
+    /*
+    border: red solid 1px;
+    */
 }
 
 body {
@@ -46,12 +50,56 @@ body {
     font-family: 'Ubuntu';
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2.7em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 1%;
+    font-size: 1.3rem;
+}
+
+nav img {
+    border-radius: 10%;
+    width: auto;
+    height: 70%;
+}
+
+nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+nav .nav-links a {
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+}
+
+nav .nav-links a:hover {
+    text-decoration: underline;
+    color: var(--Accent);
+}
+
 .header-font {
     font-size: 7rem;
 }
 
 .font-accent {
     font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono';
+    margin-bottom: 0;
+}
+
+.font-accent + .subtitle {
+    color: var(--Primary);
+    opacity: .6;
+    font-size: 1.4rem;
+    margin-top: 0;
 }
 
 .accent-highlight {
@@ -65,4 +113,10 @@ body {
     text-align: center;
     display: grid;
     place-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 90%;
+    }
 }
