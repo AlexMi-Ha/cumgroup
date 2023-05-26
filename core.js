@@ -1,21 +1,22 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.addEventListener("scroll", function(event) {
-        const animatedBoxes = document.getElementsByClassName("animated-box");
-        const windowOffsetTop = window.innerHeight + window.scrollY;
-
-        Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
-            const animatedBoxOffsetTop = animatedBox.offsetTop;
-
-            if (windowOffsetTop >= animatedBoxOffsetTop) {
-                addClass(animatedBox, "fade-in");
-            }
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("navbar-toggle").addEventListener('click', function() {
+        toggleNav();
     });
+    
+    const links = document.getElementsByClassName('nav-link');
+    for(element of links) {
+        element.addEventListener('click', function() {
+            toggleNav();
+        });
+    }
 });
 
-function addClass(element, className) {
-    const arrayClasses = element.className.split(" ");
-    if (arrayClasses.indexOf(className) === -1) {
-        element.className += " " + className;
+
+function toggleNav() {
+    const nav = document.getElementById('nav');
+    if(nav.classList.contains('active')) {
+        nav.classList.remove('active');
+    }else {
+        nav.classList.add('active');
     }
 }

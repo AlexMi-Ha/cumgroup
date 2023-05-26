@@ -82,7 +82,9 @@ nav {
     padding-right: 5%;
     padding-left: 1%;
     padding-top: 0.5em;
-    font-size: 1.3rem;
+    width: 100%;
+    font-size: 1.3em;
+    background-color: var(--Secondary);
 }
 
 nav > a, nav img {
@@ -111,10 +113,10 @@ nav .nav-links a:hover {
 }
 
 .header-font {
-    font-size: 7rem;
+    font-size: 7em;
 }
 .header-font-small {
-    font-size: 4rem;
+    font-size: 4em;
 }
 
 .font-accent {
@@ -125,7 +127,7 @@ nav .nav-links a:hover {
 .font-accent + .subtitle {
     color: var(--Primary);
     opacity: .6;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     margin-top: 0;
 }
 
@@ -188,6 +190,7 @@ nav .nav-links a:hover {
 
 .team-member:nth-child(2n) {
     background-color: var(--Tertiary);
+    flex-direction: row-reverse;
 }
 
 .team-name {
@@ -196,8 +199,80 @@ nav .nav-links a:hover {
     font-size: 1.2rem;
 }
 
-@media screen and (max-width: 600px) {
-    * {
+.navbar-toggle-icon {
+    background: url(/assets/menu.png) no-repeat 50% 50%;
+    background-size: 1.7em;
+    aspect-ratio: 1;
+    display: inline-block;
+    width: 100%;
+}
+
+#navbar-toggle {
+    height: 80%;
+    aspect-ratio: 1;
+    width: auto;
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    body {
         font-size: 90%;
+    }
+    nav .nav-links {
+        gap: 1.2em;
+    }
+
+    #home div {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .team-member {
+        display:block;
+    }
+    .team-member p {
+        text-align: left !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #navbar-toggle {
+        display: block;
+    }
+
+    #nav {
+        position: fixed;
+        display: block;
+        top: 3em;
+        background-color: var(--Tertiary);
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: all ease-in-out 200ms;
+    }
+    
+    #nav.active {
+        padding: .5em .8em;
+        height: fit-content;
+    }
+
+    #nav a {
+        display:block;
+    }
+    #nav.active a:hover::before {
+        content: "►";
+        margin-right: .2em;
+        text-decoration: none;
+        display:inline-block;
+    }
+
+    #nav.active a:not(:first-child) {
+        margin-top: .6em;        
+    }
+
+    #home div {
+        font-size: 60%;
     }
 }
