@@ -3,17 +3,20 @@
     <head>
         <title>CUMGroup - Welcome</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="styles.css" rel="stylesheet" />
-        <script src="core.js"></script>
+        <script defer src="core.js"></script>
     </head>
     <body>
         <nav>
             <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="assets/1641e470ee2baac6628de94901c38190.png" alt="CUMGroup"/></a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+            <a id="navbar-toggle"><span class="navbar-toggle-icon"></span></a>
+            <div class="nav-links" id="nav">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#team">Our Team</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
         </nav>
         <div class="screen-container" id="home">
@@ -24,17 +27,59 @@
         </div>
         <div class="screen-container" id="about">
             <div>
-                <h1 class="header-font font-accent">About</h1>
+                <h1 class="header-font-small font-accent">About</h1>
             </div>
         </div>
         <div class="screen-container" id="projects">
             <div>
-                <h1 class="header-font font-accent">Projects</h1>
+                <h1 class="header-font-small font-accent">Projects</h1>
             </div>
         </div>
-        <div class="screen-container" id="contact">
+        <div class="screen-plus-container" id="team">
             <div>
-                <h1 class="header-font font-accent">Contact</h1>
+                <h1 class="header-font-small font-accent">Our Team</h1>
+                <div class="team-group">
+                    <div class="team-member">
+                        <img src="assets/team/alex.jpg" />
+                        <p>
+                            <a href="https://github.com/AlexMi-Ha" target="_blank" class="team-name">Alex</a><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus sint tenetur quas voluptatibus optio, odit non. Adipisci neque aliquid ut maiores ex labore iure, qui esse, iusto minus soluta.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/team/anna.png" />
+                        <p>
+                            <a href="https://github.com/Annalytic-programming" target="_blank" class="team-name">Anna</a><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus sint tenetur quas voluptatibus optio, odit non. Adipisci neque aliquid ut maiores ex labore iure, qui esse, iusto minus soluta.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/team/elnaz.jpg" />
+                        <p>
+                            <a href="https://github.com/elnaz-gharoon" target="_blank" class="team-name">Elnaz</a><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus sint tenetur quas voluptatibus optio, odit non. Adipisci neque aliquid ut maiores ex labore iure, qui esse, iusto minus soluta.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/team/jas.png" />
+                        <p>
+                            <a hreF="http://github.com/jas20202" target="_blank" class="team-name">Jas</a><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus sint tenetur quas voluptatibus optio, odit non. Adipisci neque aliquid ut maiores ex labore iure, qui esse, iusto minus soluta.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/team/nick.png" />
+                        <p>
+                            <a hreF="http://github.com/WachtelHD" target="_blank" class="team-name">Nick</a><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus sint tenetur quas voluptatibus optio, odit non. Adipisci neque aliquid ut maiores ex labore iure, qui esse, iusto minus soluta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container" id="contact">
+            <div>
+                <h1 class="header-font-small font-accent">Contact</h1>
             </div>
         </div>
     </body>
