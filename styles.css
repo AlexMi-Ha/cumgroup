@@ -246,7 +246,7 @@ nav .nav-links a:hover {
     #nav {
         position: fixed;
         display: block;
-        top: 3em;
+        top: 2.7em;
         background-color: var(--Tertiary);
         width: 100%;
         overflow: hidden;
