@@ -216,6 +216,63 @@ nav .nav-links a:hover {
     cursor: pointer;
 }
 
+/* Projects zeugs */
+
+.project-cards {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 40vmin;
+    aspect-ratio: 5/7;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+}
+
+.card-wrap {
+    width: 100%;
+    aspect-ratio: 5/7;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--Tertiary);
+    padding-bottom: 1em;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0 1em;
+    text-align: left;
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono';
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--Accent);
+}
+
+.card-actions {
+    display:flex;
+    justify-content: center;
+}
+
+.card-actions a, .card-actions button {
+    all:unset;
+    padding: .5em 1em;
+    background-color: var(--PrimaryButton);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
     body {
         font-size: 90%;
