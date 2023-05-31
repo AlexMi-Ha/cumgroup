@@ -85,6 +85,7 @@ nav {
     width: 100%;
     font-size: 1.3em;
     background-color: var(--Secondary);
+    z-index: 100000;
 }
 
 nav > a, nav img {
