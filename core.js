@@ -46,6 +46,8 @@ function openProjectModal(projId) {
 
     const modal = document.getElementById('proj-dialog');
     document.getElementById('modal-content').innerHTML = proj.modalHtml;
+    const header = document.getElementById('modal-header');
+    header.innerHTML = header.innerHTML.replace('${{projName}}', proj.title);
     modal.showModal();
 }
 

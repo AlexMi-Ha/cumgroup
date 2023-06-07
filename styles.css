@@ -25,17 +25,17 @@
     src: local('Ubuntu'), url("fonts/Ubuntu/Ubuntu-Regular.ttf") format('woff');
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: var(--Tertiary);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 8px;
     background-color: var(--Tertiary);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #909090;
@@ -284,7 +284,7 @@ nav .nav-links a:hover {
     justify-content: center;
 }
 
-.card-actions a, .card-actions button {
+.card-actions a, .card-actions button, .modal-header button {
     all:unset;
     padding: .5em 1em;
     background-color: var(--PrimaryButton);
@@ -297,6 +297,8 @@ body:has(dialog[open]) {overflow: hidden}
 dialog {
     overflow: hidden;
     max-width: 1300px;
+    background-color: var(--Tertiary);
+    color: var(--Primary);
 }
 
 dialog::backdrop {
@@ -304,10 +306,15 @@ dialog::backdrop {
 }
 
 .modal-header {
-
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 .modal-content {
+    padding: 2em;
     max-height: 80vh;
     overflow: auto;
 }
