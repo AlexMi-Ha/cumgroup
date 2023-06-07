@@ -292,6 +292,30 @@ nav .nav-links a:hover {
     cursor: pointer;
 }
 
+body:has(dialog[open]) {overflow: hidden}
+
+dialog {
+    overflow: hidden;
+    max-width: 1300px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0,0,0,.6);
+}
+
+.modal-header {
+
+}
+
+.modal-content {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.modal-footer {
+
+}
+
 @media screen and (max-width: 800px) {
     body {
         font-size: 90%;
