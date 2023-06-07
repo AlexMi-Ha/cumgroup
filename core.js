@@ -39,6 +39,16 @@ function addProject(proj) {
     return proj;
 }
 
+function openProjectModal(projId) {
+    const proj = allProjects.get(projId);
+    if(!proj)
+        return;
+
+    const modal = document.getElementById('proj-dialog');
+    document.getElementById('modal-content').innerHTML = proj.modalHtml;
+    modal.showModal();
+}
+
 function reloadProjectView() {
     htmlGen = "";
     for(const proj of allProjects.values()) {
@@ -53,7 +63,7 @@ function reloadProjectView() {
                                 </div>
                             </div>
                             <div class="card-actions">
-                                <button onclick="openProjectModal(${proj.projId})">Read More</button>
+                                <button onclick="openProjectModal('${proj.projId}')">Read More</button>
                             </div>
                         </div>
                     </div>
