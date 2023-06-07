@@ -20,3 +20,44 @@ function toggleNav() {
         nav.classList.add('active');
     }
 }
+
+
+const allProjects = new Map();
+
+class Project {
+    constructor(projId, title, previewImage, previewText, modalHtml) {
+        this.projId = projId;
+        this.title = title;
+        this.previewImage = previewImage;
+        this.previewText = previewText;
+        this.modalHtml = modalHtml;
+    }
+}
+
+function addProject(proj) {
+    allProjects.set(proj.projId, proj);
+    return proj;
+}
+
+function reloadProjectView() {
+    htmlGen = "";
+    for(const proj of allProjects.values()) {
+        htmlGen += `
+        <div class="card">
+                        <div class="card-wrap">
+                            <div>
+                                <img class="card-image" src="${proj.previewImage}"/>
+                                <div class="card-content">
+                                    <h2 class="card-title">${proj.title}</h2>
+                                    <p>${proj.previewText}</p>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button onclick="openProjectModal(${proj.projId})">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+        `;
+    }
+    document.getElementById("project-cards").innerHTML = htmlGen;
+}
